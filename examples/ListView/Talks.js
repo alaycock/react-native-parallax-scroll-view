@@ -58,6 +58,7 @@ class Talks extends Component {
             stickyHeaderHeight={ STICKY_HEADER_HEIGHT }
             parallaxHeaderHeight={ PARALLAX_HEADER_HEIGHT }
             backgroundSpeed={10}
+            contentContainerStyle={styles.contentContainer}
 
             renderBackground={() => (
               <View key="background">
@@ -111,7 +112,8 @@ class Talks extends Component {
 const window = Dimensions.get('window');
 
 const AVATAR_SIZE = 120;
-const ROW_HEIGHT = 60;
+const ROW_HEIGHT = 120;
+const ROW_WIDTH = 200;
 const PARALLAX_HEADER_HEIGHT = 350;
 const STICKY_HEADER_HEIGHT = 70;
 
@@ -170,6 +172,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     paddingHorizontal: 10,
     height: ROW_HEIGHT,
+    width: ROW_WIDTH,
     backgroundColor: 'white',
     borderColor: '#ccc',
     borderBottomWidth: 1,
@@ -177,6 +180,11 @@ const styles = StyleSheet.create({
   },
   rowText: {
     fontSize: 20
+  },
+  contentContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap'
   }
 });
 
